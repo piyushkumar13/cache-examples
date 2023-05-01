@@ -50,12 +50,12 @@ public class ProductController {
         return productRepository.findById(id).orElse(ProductEntity.builder().description("default").sku("default").id(0).name("default").build());
     }
 
-    @RequestMapping(path = "/products/{id}/withConditions", method = RequestMethod.GET)
-    @Cacheable(value = {"productPerId"}, key = "#id", unless = "#result.sku.length() < 3", condition = "#id.equals(1)")
-    public ProductEntity getProductAndCacheWithCondition(@PathVariable("id") Integer id){
+    @RequestMapping(path = "/products/{id}/withConditions/{name}", method = RequestMethod.GET)
+    @Cacheable(value = {"productPerId"}, key = "{#id.concat(#name)}")
+    public ProductEntity getProductAndCacheWithCondition(@PathVariable("id") String id, @PathVariable("name") String name){
 
         log.info("Fetching data by id, id={}", id);
-        return productRepository.findById(id).orElse(ProductEntity.builder().description("default").sku("default").id(0).name("default").build());
+        return productRepository.findById(Integer.valueOf(id)).orElse(ProductEntity.builder().description("default").sku("default").id(0).name("default").build());
     }
 
 
