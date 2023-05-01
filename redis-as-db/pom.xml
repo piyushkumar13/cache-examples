@@ -10,10 +10,10 @@
     </parent>
 
     <groupId>com.redis.example</groupId>
-    <artifactId>redis-example</artifactId>
+    <artifactId>redis-as-db</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
-    <name>redis-example</name>
+    <name>redis-as-db</name>
 
     <description>Spring boot with redis</description>
 
@@ -33,6 +33,13 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
         </dependency>
 
         <dependency>

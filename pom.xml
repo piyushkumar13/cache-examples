@@ -23,7 +23,7 @@
     </properties>
 
     <modules>
-        <module>redis-example</module>
+        <module>redis-as-db</module>
     </modules>
 
     <build>
