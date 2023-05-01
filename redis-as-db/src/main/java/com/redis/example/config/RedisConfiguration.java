@@ -7,7 +7,7 @@
  */
 package com.redis.example.config;
 
-import com.redis.example.domain.entity.ProductForTemplate;
+import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
@@ -25,6 +25,8 @@ import org.springframework.data.redis.serializer.RedisSerializer;
  *     port: 6379
  *     database: 0
  *     client-type: jedis
+ *
+ * Also see classes {@link RedisAutoConfiguration}, {@link RedisSerializer}
  *
  * @author Piyush Kumar.
  * @since 29/04/23.
