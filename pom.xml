@@ -24,6 +24,8 @@
 
     <modules>
         <module>redis-as-db</module>
+        <module>redis-as-a-cache</module>
+
     </modules>
 
     <build>

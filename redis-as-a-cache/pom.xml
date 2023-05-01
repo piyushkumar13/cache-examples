@@ -9,24 +9,26 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.redis.example</groupId>
-    <artifactId>redis-as-db</artifactId>
+    <artifactId>redis-as-a-cache</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <name>redis-as-a-cache</name>
 
-    <name>redis-as-db</name>
+    <description>Demo project for Spring Boot</description>
 
-    <description>Spring boot with redis</description>
+    <properties>
+        <java.version>11</java.version>
+    </properties>
 
     <dependencies>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
@@ -39,7 +41,6 @@
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
         </dependency>
-
 
     </dependencies>
 
